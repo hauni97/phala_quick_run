@@ -9,6 +9,6 @@ To make it executable type:
 
 ```chmod +x phala_quick_install.sh```
 
-No execute it by typing:
+Now execute it by typing:
 
 ```sudo ./phala_quick_install.sh```
