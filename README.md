@@ -12,3 +12,5 @@ To make it executable type:
 Now execute it by typing:
 
 ```sudo ./phala_quick_install.sh```
+
+_Known bug: Script currently always concludes node.js & yarn + rust is not installed even if it is._
