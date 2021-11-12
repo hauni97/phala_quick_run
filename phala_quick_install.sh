@@ -71,7 +71,7 @@ else
     read answer
     if [ "$answer" != "${answer#[Yy]}" ] ;then 
     echo Yes
-    sudo snap install rustup --classic
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     else
     echo No
     fi
@@ -114,4 +114,7 @@ fi
 
 echo ""
 echo "[+] To configure your current shell with Intel SGX SDK , run: \nsource /opt/intel/sgxsdk/environment"
+echo "[+] To configure your current shell with Rust, run: \nsource $HOME/.cargo/env"
+
+
 
