@@ -78,7 +78,6 @@ else
     exit ;
     else
     echo "waiting for the keypress"
-    else
     echo No
     fi
 
