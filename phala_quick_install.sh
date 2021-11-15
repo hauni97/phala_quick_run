@@ -47,7 +47,7 @@ if [ $? -eq 0 ]; then
     echo "Package $1 is installed!"
 else
     echo "Package $1 is NOT installed!"
-    echo -n "Do you wish to install curl (y/n)? "
+    echo -n "Do you wish to install curl (y/n)?"
     read answer
     if [ "$answer" != "${answer#[Yy]}" ] ;then 
     echo Yes
@@ -72,6 +72,12 @@ else
     if [ "$answer" != "${answer#[Yy]}" ] ;then 
     echo Yes
     echo -n "1. In a seperate shell on same host enter 'curl https://sh.rustup.rs -sSf | sh'\n2.Then enter 'source ~/.cargo/env'\nPress any key to continue when done" 
+    while [ true ] ; do
+    read -t 3 -n 1
+    if [ $? = 0 ] ; then
+    exit ;
+    else
+    echo "waiting for the keypress"
     else
     echo No
     fi
@@ -83,10 +89,34 @@ fi
 echo ""
 echo "[+] Installing SGX SDK"
 echo  -n "1. In a seperate shell on same host enter 'wget https://download.01.org/intel-sgx/sgx-linux/2.15/distro/ubuntu20.04-server/sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
+while [ true ] ; do
+read -t 3 -n 1
+if [ $? = 0 ] ; then
+exit ;
+else
+echo "waiting for the keypress"
 echo -n "In seperate shell enter'chmod +x sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
+while [ true ] ; do
+read -t 3 -n 1
+if [ $? = 0 ] ; then
+exit ;
+else
+echo "waiting for the keypress"
 echo -n "In seperate shell enter 'echo -e 'no\n/opt/intel' | sudo ./sgx_linux_x64_sdk_2.15.100.3.bin"
+while [ true ] ; do
+read -t 3 -n 1
+if [ $? = 0 ] ; then
+exit ;
+else
+echo "waiting for the keypress"
 yes | rm sgx_linux_x64_sdk_2.15.100.3.bin
 echo -n "[+] To configure your current shell with Intel SGX SDK , run in the seperate shell: \nsource /opt/intel/sgxsdk/environment\nhit any key to proceed"
+while [ true ] ; do
+read -t 3 -n 1
+if [ $? = 0 ] ; then
+exit ;
+else
+echo "waiting for the keypress"
 
 
 
