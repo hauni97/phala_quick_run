@@ -71,7 +71,7 @@ else
     read answer
     if [ "$answer" != "${answer#[Yy]}" ] ;then 
     echo Yes
-    read -n 1 -s -r -p "1. In a seperate shell on same host enter 'curl https://sh.rustup.rs -sSf | sh'\n2.Then enter 'source ~/.cargo/env'\nPress any key to continue when done"
+    read "1. In a seperate shell on same host enter 'curl https://sh.rustup.rs -sSf | sh'\n2.Then enter 'source ~/.cargo/env'\nPress any key to continue when done"
     else
     echo No
     fi
@@ -82,11 +82,11 @@ fi
 #Installing SGX SDK
 echo ""
 echo "[+] Installing SGX SDK"
-read -n 1 -s -r -p "1. In a seperate shell on same host enter 'wget https://download.01.org/intel-sgx/sgx-linux/2.15/distro/ubuntu20.04-server/sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
-read -n 1 -s -r -p "In seperate shell enter'chmod +x sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
-read -n 1 -s -r -p "In seperate shell enter 'echo -e 'no\n/opt/intel' | sudo ./sgx_linux_x64_sdk_2.15.100.3.bin"
+read  "1. In a seperate shell on same host enter 'wget https://download.01.org/intel-sgx/sgx-linux/2.15/distro/ubuntu20.04-server/sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
+read  "In seperate shell enter'chmod +x sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
+read  "In seperate shell enter 'echo -e 'no\n/opt/intel' | sudo ./sgx_linux_x64_sdk_2.15.100.3.bin"
 yes | rm sgx_linux_x64_sdk_2.15.100.3.bin
-read -n 1 -s -r -p "[+] To configure your current shell with Intel SGX SDK , run in the seperate shell: \nsource /opt/intel/sgxsdk/environment\nhit any key to proceed"
+read  "[+] To configure your current shell with Intel SGX SDK , run in the seperate shell: \nsource /opt/intel/sgxsdk/environment\nhit any key to proceed"
 
 
 
