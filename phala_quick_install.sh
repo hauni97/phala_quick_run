@@ -84,7 +84,7 @@ echo ""
 echo "[+] Installing SGX SDK"
 read -n 1 -s -r -p "1. In a seperate shell on same host enter 'wget https://download.01.org/intel-sgx/sgx-linux/2.15/distro/ubuntu20.04-server/sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
 read -n 1 -s -r -p "In seperate shell enter'chmod +x sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
-read -n 1 -s -r -p "In seperate shell enter 'echo -e 'no\n/opt/intel' | sudo ./sgx_linux_x64_sdk_2.15.100.3.bin'
+read -n 1 -s -r -p "In seperate shell enter 'echo -e 'no\n/opt/intel' | sudo ./sgx_linux_x64_sdk_2.15.100.3.bin"
 yes | rm sgx_linux_x64_sdk_2.15.100.3.bin
 read -n 1 -s -r -p "[+] To configure your current shell with Intel SGX SDK , run in the seperate shell: \nsource /opt/intel/sgxsdk/environment\nhit any key to proceed"
 
@@ -114,8 +114,8 @@ fi
 
 
 echo ""
-echo "[+] Final checks running"
-echo "rustup --version
+echo "[+] Final checks running..... Se below:"
+rustup --version
 # rustup 1.22.1 (b01adbbc3 2020-07-08)
 
 cargo --version
