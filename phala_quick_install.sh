@@ -71,8 +71,7 @@ else
     read answer
     if [ "$answer" != "${answer#[Yy]}" ] ;then 
     echo Yes
-    echo "1. In a seperate shell on same host enter 'curl https://sh.rustup.rs -sSf | sh'\n2.Then enter 'source ~/.cargo/env'\nPress any key to continue when done"
-    read 
+    echo -n "1. In a seperate shell on same host enter 'curl https://sh.rustup.rs -sSf | sh'\n2.Then enter 'source ~/.cargo/env'\nPress any key to continue when done" 
     else
     echo No
     fi
