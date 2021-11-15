@@ -83,15 +83,12 @@ fi
 #Installing SGX SDK
 echo ""
 echo "[+] Installing SGX SDK"
-echo  "1. In a seperate shell on same host enter 'wget https://download.01.org/intel-sgx/sgx-linux/2.15/distro/ubuntu20.04-server/sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
-read
-echo  "In seperate shell enter'chmod +x sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
-read
-echo  "In seperate shell enter 'echo -e 'no\n/opt/intel' | sudo ./sgx_linux_x64_sdk_2.15.100.3.bin"
-read
+echo  -n "1. In a seperate shell on same host enter 'wget https://download.01.org/intel-sgx/sgx-linux/2.15/distro/ubuntu20.04-server/sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
+echo -n "In seperate shell enter'chmod +x sgx_linux_x64_sdk_2.15.100.3.bin'\nPress any key to continue when done"
+echo -n "In seperate shell enter 'echo -e 'no\n/opt/intel' | sudo ./sgx_linux_x64_sdk_2.15.100.3.bin"
 yes | rm sgx_linux_x64_sdk_2.15.100.3.bin
-echo  "[+] To configure your current shell with Intel SGX SDK , run in the seperate shell: \nsource /opt/intel/sgxsdk/environment\nhit any key to proceed"
-read
+echo -n "[+] To configure your current shell with Intel SGX SDK , run in the seperate shell: \nsource /opt/intel/sgxsdk/environment\nhit any key to proceed"
+
 
 
 
