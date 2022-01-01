@@ -71,7 +71,9 @@ else
     read answer
     if [ "$answer" != "${answer#[Yy]}" ] ;then 
     echo Yes
-    echo -n "1. In a seperate shell on same host enter 'curl https://sh.rustup.rs -sSf | sh'\n2.When installation is complete enter 'source ~/.cargo/env'\nPress any key to continue when done" 
+    echo "1. In a seperate shell on same host enter 'curl https://sh.rustup.rs -sSf | sh'"
+    echo "2. When installation is complete enter 'source ~/.cargo/env'"
+    echo "Press any key to continue when done" 
     while [ true ] ; do
     read KEYTYPE
     if [ $? = 0 ] ; then
